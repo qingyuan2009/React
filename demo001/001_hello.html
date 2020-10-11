@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+<script src="node_modules/react/umd/react.development.js"></script>
+<script src="node_modules/react-dom/umd/react-dom.development.js"></script>
+<script src="node_modules/babel-standalone/babel.min.js"></script>
+</head>
+<body>	
+    <!--创建 DOM Root, 一个页面需要一个root，这样可以被React进行管理-->
+    <div id="demoReact">
+
+
+
+    </div>
+    <script type="text/babel">
+        //这是JSX语法 == javascript + xml, 优点：
+        //执行效率快，类型更安全，代码更快速
+        let myDom=<h1>Hello World</h1>;
+        ReactDOM.render(myDom, document.getElementById("demoReact"));
+    </script>
+</body>
+</html>
