@@ -1,0 +1,43 @@
+    <!DOCTYPE html>
+    <html>
+    <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="node_modules/react/umd/react.development.js"></script>
+    <script src="node_modules/react-dom/umd/react-dom.development.js"></script>
+    <script src="node_modules/babel-standalone/babel.min.js"></script>
+    </head>
+    <body>	
+        <!--创建 DOM Root, 一个页面需要一个root，这样可以被React进行管理-->
+        <div id="demoReact">
+
+
+
+        </div>
+        <script type="text/babel">   
+            //使用表达式 {}       
+            let text= "您好";
+            let num=9527;
+
+            let user={
+                name:"周睿",
+                age: 28
+            }
+
+            function fun(obj){
+                //普通语法
+                //return "姓名是：" + obj.name + " 年龄是：" + obj.age;
+                //ES6 模板语法  推荐
+                return `姓名是${obj.name} 年龄是${obj.age}` ;
+            }
+
+            let myDom= (
+                <div>
+                    <div>{text}</div> 
+                    <div>{num+1}</div>
+                    <div>{fun(user)}</div>
+                </div>)
+            ReactDOM.render(myDom, document.getElementById("demoReact"));
+        </script>
+    </body>
+    </html>
