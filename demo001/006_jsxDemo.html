@@ -1,0 +1,51 @@
+    <!DOCTYPE html>
+    <html>
+    <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="node_modules/react/umd/react.development.js"></script>
+    <script src="node_modules/react-dom/umd/react-dom.development.js"></script>
+    <script src="node_modules/babel-standalone/babel.min.js"></script>
+    <style>
+        .demoStyle{
+            color: blue
+        }
+    </style>
+    </head>
+    <body>	
+        <!--创建 DOM Root, 一个页面需要一个root，这样可以被React进行管理-->
+        <div id="demoReact"></div>
+        <script type="text/babel">   
+            //使用表达式 {}       
+            let phone= 4999; 
+
+            var arr=[
+                <p>新闻列表1</p>,
+                <p>新闻列表2</p>,
+                <p>新闻列表3</p>,
+                <p>新闻列表4</p>
+            ];
+
+            let text="百度";
+            let linkUrl = "http://www.baidu.com";   
+
+            //style
+            let domStyle={color:"red", backgroundColor:"pink"};
+            let myStyle=<p style={domStyle}>my style</p>
+
+            //不能使用class，因为是关键字，而是ClassName
+            let myStyle2=<p className="demoStyle">my style 2</p>
+
+            let myDom= (
+                <div>
+                    当前手机价格是{phone}----{phone>4000?"很贵":"很便宜"}
+                    {arr}
+                    <a href={linkUrl}>{text}</a>
+                    {myStyle}
+                    {myStyle2}
+                </div>
+            )
+            ReactDOM.render(myDom, document.getElementById("demoReact"));
+        </script>
+    </body>
+    </html>
