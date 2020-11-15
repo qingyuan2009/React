@@ -1,0 +1,39 @@
+    <!DOCTYPE html>
+    <html>
+    <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="node_modules/react/umd/react.development.js"></script>
+    <script src="node_modules/react-dom/umd/react-dom.development.js"></script>
+    <script src="node_modules/babel-standalone/babel.min.js"></script>    
+    </head>
+    <body>	
+        <!--创建 DOM Root, 一个页面需要一个root，这样可以被React进行管理-->
+        <div id="demoReact"></div>
+        <script type="text/babel">   
+
+            var obj={
+                name:"睿",
+                age:18,
+                sex:"M"
+            }
+                 
+            console.log(obj.name);
+            console.log(obj["age"]);
+
+            //获得object key
+            console.log(Object.keys(obj));
+            console.log(Object.values(obj));          
+
+            let myDom= <div>
+                {
+                    Object.keys(obj).map((v,i)=>{
+                        return (<p>属性是:{v} ---- 值是: {obj[v]} </p>)
+                    })
+                }
+            </div>           
+
+            ReactDOM.render(myDom, document.getElementById("demoReact"));
+        </script>
+    </body>
+    </html>
