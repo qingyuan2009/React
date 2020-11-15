@@ -1,0 +1,27 @@
+    <!DOCTYPE html>
+    <html>
+    <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="node_modules/react/umd/react.development.js"></script>
+    <script src="node_modules/react-dom/umd/react-dom.development.js"></script>
+    <script src="node_modules/babel-standalone/babel.min.js"></script>    
+    </head>
+    <body>	
+        <!--创建 DOM Root, 一个页面需要一个root，这样可以被React进行管理-->
+        <div id="demoReact"></div>
+        <script type="text/babel">   
+                 
+            var arr=["吃饭","睡觉","拉屎"];            
+           
+            let newarr = [];
+            for(let index in arr){
+                newarr.push(<p key={index}>{arr[index]}</p>);
+            }
+
+            let myDom=<div>{newarr}</div>;
+
+            ReactDOM.render(myDom, document.getElementById("demoReact"));
+        </script>
+    </body>
+    </html>

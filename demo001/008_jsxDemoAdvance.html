@@ -1,0 +1,35 @@
+    <!DOCTYPE html>
+    <html>
+    <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="node_modules/react/umd/react.development.js"></script>
+    <script src="node_modules/react-dom/umd/react-dom.development.js"></script>
+    <script src="node_modules/babel-standalone/babel.min.js"></script>    
+    </head>
+    <body>	
+        <!--创建 DOM Root, 一个页面需要一个root，这样可以被React进行管理-->
+        <div id="demoReact"></div>
+        <script type="text/babel">   
+                 
+            var arr=["吃饭","睡觉","拉屎"]; 
+            let index = -1;
+            function fun(){ 
+                let myDom= arr.map((v, i)=>{
+                    return (
+                        <p style={{color:i==index?'red':''}} key={i} onClick={()=>{index=i;console.log(i==index);render()}}>{v}</p> 
+                    )
+                })  
+                return myDom;
+            }
+
+            function render(){
+                ReactDOM.render(fun(), document.getElementById("demoReact"));
+            }
+
+            //初始化
+            render();
+            
+        </script>
+    </body>
+    </html>
