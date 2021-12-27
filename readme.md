@@ -64,5 +64,11 @@ C:\Users\i035299\Documents\GitHub\React\demo001>npm i babel-standalone --save
 # 外部js文件
 用Open with live server 执行jsxDocuments-> 005_jsxDemo.html
 
+# 组件
+高耦合，低内聚：把逻辑紧密的内容放在一个组件当中，把不同组件的依赖关系尽量弱化，每个组件尽可能的独立
 
+组件中的内容：
+1. 构建方式
+2. 组件的属性
+3. 生命周期
 
