@@ -72,3 +72,7 @@ C:\Users\i035299\Documents\GitHub\React\demo001>npm i babel-standalone --save
 2. 组件的属性
 3. 生命周期
 
+https://www.bilibili.com/video/BV1Ka4y1J7Zu?p=2&vd_source=9b7a10ebf65cc7b2469d1903bba73332
+https://www.bilibili.com/video/BV1Ka4y1J7Zu?p=2&vd_source=9b7a10ebf65cc7b2469d1903bba73332
+
+【尚硅谷】Web前端React项目实战教程丨谷粒后台
